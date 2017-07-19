@@ -2,6 +2,8 @@
 Download the auto captions file from a YouTube video and convert it into a plain text file.
 
 ## Dependencies
+Sed
+
 youtube-dl
 https://rg3.github.io/youtube-dl/
 

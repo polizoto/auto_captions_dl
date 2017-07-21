@@ -13,5 +13,5 @@ The Aeneas portion of the script is for converting the VTT file from YouTube to 
 
 ## Usage
 
-youtube.sh youtube_URL
+`youtube.sh youtube_URL`
 

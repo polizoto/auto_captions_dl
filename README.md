@@ -1,5 +1,5 @@
 # auto_captions_dl
-Download the auto captions file from a YouTube video and convert it into a plain text file.
+Download the auto captions file from a YouTube video, convert to plain text, and add punctuation.
 
 ## Dependencies
 Sed

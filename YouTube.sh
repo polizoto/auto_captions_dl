@@ -59,7 +59,7 @@ sed -i 's/&gt;/>/g' out.srt
 # Step #10 replace CONTENTS section of punctuator with transcript
 # Replace contents of punctuator
 
-sed -ri "s/CONTENTS/$(cat out.srt)/g" ./punctuate.sh
+sed -ri "s@CONTENTS@$(cat out.srt)@g" ./punctuate.sh
 
 # Step #11 Run punctuator
 
@@ -81,7 +81,7 @@ rename 's/.vtt/.txt/g' *.vtt
 
 # Step # 15 Clean Up Punctuate script (remove transcript data)
 
-sed -i 's/"text=.*"/"text=CONTENTS"/g' ./punctuate.sh
+sed -i 's@"text=.*"@"text=CONTENTS"@g' ./punctuate.sh
 
 # Step # 16 Clean up Transcript
 

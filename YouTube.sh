@@ -3,6 +3,14 @@
 # Downloads YouTube captions and cleans them up (makes them a text file and adds punctuation)
 # requires that there are no text files in current working directory
 
+# check dependencies 
+
+command -v aeneas_execute_task >/dev/null 2>&1 || { echo >&2 "aeneas_execute_task not found please install from https://github.com/readbeyond/aeneas/blob/master/wiki/INSTALL.md)"; exit 1; }
+
+command -v rename >/dev/null 2>&1 || { echo >&2 "rename dependency not found. Please install using 'brew install rename'"; exit 1; }
+ 
+###### SCRIPT #######
+
 for file in "$@"
 
 do

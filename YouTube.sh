@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Downloads YouTube captions and cleans them up (makes them a text file and adds punctuation)
+# requires that there are no text files in current working directory
 
 for file in "$@"
 
@@ -12,9 +13,9 @@ do
 # Step 1
 # If you don't have the audio file remove "skip download" options
 
-# youtube-dl --write-auto-sub "$@"
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --write-auto-sub "$@"
 
-youtube-dl --write-auto-sub --skip-download "$@"
+# youtube-dl --write-auto-sub --skip-download "$@"
 
 # Step 2
 
@@ -57,7 +58,6 @@ sed -i 's/&gt;/>/g' out.srt
 # sed -i 's/\.\s*./\U&\E/g' out.txt
 
 # Step #10 replace CONTENTS section of punctuator with transcript
-# Replace contents of punctuator
 
 sed -ri "s@CONTENTS@$(cat out.srt)@g" ./punctuate.sh
 
@@ -70,10 +70,13 @@ sed -ri "s@CONTENTS@$(cat out.srt)@g" ./punctuate.sh
 mv *.txt *.vtt
 
 # Step # 13 Rename the VTT file (remove number IDs)
+# if you downloaded audio file (you removed skip download from step #1) comment out the second and third rename commands in this step
 
 rename 's/-.*.en//' *.vtt
-# rename 's/.mp4/.en.mp4/' *.mp4
-# rename 's/-.*.en//' *.mp4
+rename 's/.mp4/.en.mp4/' *.mp4
+rename 's/-.*.en//' *.mp4
+# rename 's/.mkv/.en.mkv/' *.mkv
+# rename 's/-.*.en//' *.mkv
 
 # Step #14 Rename VTT as a TXT File
 

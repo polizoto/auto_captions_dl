@@ -15,7 +15,7 @@ N.B. we recommend brew installation for Mac (https://github.com/danielbair/homeb
 ## Usage
 1) Open terminal (Mac)
 
-2) CD to directory with scripts (YouTube.sh, Punctuate.sh)
+2) CD to directory with scripts (YouTube.sh, Punctuate.sh). Both scripts must be in the same directory.
 
 3) Enter path to script and add the URL to the YouTube video
 

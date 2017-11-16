@@ -2,13 +2,18 @@
 Download the auto captions file from a YouTube video, convert to plain text, and add punctuation.
 
 ## Dependencies
-*Python 2.7 +*
+Python 2.7 +
+
 sed, rename, mv (should be installed already on a Mac)
 
 youtube-dl
+
 https://rg3.github.io/youtube-dl/
 
-Aeneas (https://github.com/readbeyond/aeneas)
+Aeneas 
+
+(https://github.com/readbeyond/aeneas)
+
 N.B. we recommend brew installation for Mac (https://github.com/danielbair/homebrew-tap)
 
 (The Aeneas portion of the script is for converting the VTT file from YouTube to SRT format as an intermediate step.)

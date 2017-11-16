@@ -22,3 +22,8 @@ N.B. we recommend brew installation for Mac (https://github.com/danielbair/homeb
 `YouTube.sh YouTube_URL`
 
 4) You will receive a MP4 of the YouTube video and a TXT file of the Auto CCs from the YouTube video.
+
+## Notes
+
+These scripts have been designed to work on a Macintosh computer. For scripts that work on a PC, please see this repo:
+

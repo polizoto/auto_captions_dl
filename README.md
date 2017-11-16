@@ -2,7 +2,7 @@
 Download the auto captions file from a YouTube video, convert to plain text, and add punctuation.
 
 ## Dependencies
-Python 2.7 +
+*Python 2.7 +*
 sed, rename, mv (should be installed already on a Mac)
 
 youtube-dl

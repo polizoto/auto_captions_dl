@@ -28,4 +28,4 @@ N.B. we recommend brew installation for Mac: https://github.com/danielbair/homeb
 ## Notes
 
 - These scripts have been designed for use on a Mac. For scripts that will work on a PC, see this repo: https://github.com/polizoto/auto_captions_dl_pc
-
+- For more information, please contact jpolizzotto@htctu.net

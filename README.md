@@ -18,7 +18,7 @@ youtube-dl: https://rg3.github.io/youtube-dl/
 `brew install youtube-dl`
 
 Aeneas: https://github.com/readbeyond/aeneas
-- To install Aeneas and all its dependencies on macOS X 10.7 and up, we recommend the aeneas-installer method provided Daniel Bair (https://github.com/danielbair/aeneas-installer_
+- To install Aeneas and all its dependencies on macOS X 10.7 and up, we recommend the aeneas-installer method provided by Daniel Bair (https://github.com/danielbair/aeneas-installer_
 - Download the repository and extract the Mac_OSX_Installer folder
 - cd to Mac_OSX_Installer folder
 - run build_setup.sh

@@ -11,8 +11,6 @@ Homebrew: https://brew.sh/
 - we recommend installing this package manager for macOS, since it makes installing YouTube-dl and Aeneas easier.
 - paste the following code into a mac Terminal and press Return
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-- Homebrew will install the command line tools and XCode
-- Wait for the terminal to finish printing installation output
 
 youtube-dl: https://rg3.github.io/youtube-dl/
 `brew install youtube-dl`

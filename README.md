@@ -21,10 +21,10 @@ Aeneas: https://github.com/readbeyond/aeneas
 - To install Aeneas and all its dependencies on macOS X 10.7 and up, we recommend the aeneas-installer method provided by Daniel Bair (https://github.com/danielbair/aeneas-installer_
 - Download the repository and extract the Mac_OSX_Installer folder
 - cd to Mac_OSX_Installer folder
-- run build_setup.sh
-- run build_packages.sh
+- run `build_setup.sh`
+- run `build_packages.sh`
 
-N.B. You may also be prompted to run brew install ffmpeg
+N.B. You may also be prompted to run `brew install ffmpeg`
 
 (The Aeneas portion of the script is for converting the VTT file from YouTube to SRT format as an intermediate step.)
 

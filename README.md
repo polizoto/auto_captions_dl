@@ -5,10 +5,18 @@ Download the auto captions file from a YouTube video, convert to plain text, and
 
 Python 2.7 + (should be installed already on a Mac)
 
-Homebrew: https://brew.sh/
-- we recommend installing this package manager for macOS, since it makes installing YouTube-dl and Aeneas easier.
-- paste the following code into a mac Terminal and press Return
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+Aeneas: https://github.com/readbeyond/aeneas
+1. To install Aeneas and all its dependencies on macOS X, we recommend the all-in-one installer provided by Daniel Bair: https://github.com/sillsdev/aeneas-installer/releases. The all-in-one installer will install Homebrew, a package manager for macOS, which will be used to install other dependences for these scripts.
+
+2. If the first method does not work, we recommend using the steps Daniel Bair has provided at this github repo: https://github.com/danielbair/aeneas-installer_. These steps will also install Homebrew. Follow these steps (from the ReadMe document):
+  - Download the repository and extract the Mac_OSX_Installer folder
+  - cd to Mac_OSX_Installer folder
+  - run `build_setup.sh`
+  - run `build_packages.sh`
+
+N.B. This second method does not install FFMPEG, an Aeneas dependency, so you will be prompted to run `brew install ffmpeg`
+
+(The Aeneas portion of the script is for converting the VTT file from YouTube to SRT format as an intermediate step.)
 
 youtube-dl: https://rg3.github.io/youtube-dl/
 `brew install youtube-dl`
@@ -18,17 +26,6 @@ rename
 
 sed
 `brew install gnu-sed --with-default-names`
-
-Aeneas: https://github.com/readbeyond/aeneas
-- To install Aeneas and all its dependencies on macOS X 10.7 and up, we recommend the aeneas-installer method provided by Daniel Bair (https://github.com/danielbair/aeneas-installer_)
-  - Download the repository and extract the Mac_OSX_Installer folder
-  - cd to Mac_OSX_Installer folder
-  - run `build_setup.sh`
-  - run `build_packages.sh`
-
-N.B. You may also be prompted to run `brew install ffmpeg`
-
-(The Aeneas portion of the script is for converting the VTT file from YouTube to SRT format as an intermediate step.)
 
 ## Usage
 1) Download or clone auto_captions_dl repository

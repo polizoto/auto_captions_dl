@@ -37,11 +37,16 @@ N.B. You may also be prompted to run `brew install ffmpeg`
 
 3) CD to directory with scripts. (YouTube.sh and Punctuate.sh scripts must be in the same directory.)
 
-4) Enter path to YouTube.sh script and add the URL to the YouTube video.
+4) Make the scripts executable (one-time-only step)
+
+`chmod +x ./YouTube.sh`
+`chmod +x ./punctuate.sh`
+
+5) Enter path to YouTube.sh script and add the URL to the YouTube video.
 
 `YouTube.sh YouTube_URL`
 
-5) You will receive a MP4 of the YouTube video and a TXT file of the Auto CCs from the YouTube video.
+6) You will receive a MP4 of the YouTube video and a TXT file of the Auto CCs from the YouTube video.
 
 ## Notes
 

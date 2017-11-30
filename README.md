@@ -40,6 +40,7 @@ N.B. You may also be prompted to run `brew install ffmpeg`
 4) Make the scripts executable (one-time-only step)
 
 `chmod +x ./YouTube.sh`
+
 `chmod +x ./punctuate.sh`
 
 5) Enter path to YouTube.sh script and add the URL to the YouTube video.

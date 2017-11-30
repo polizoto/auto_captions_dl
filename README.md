@@ -5,8 +5,6 @@ Download the auto captions file from a YouTube video, convert to plain text, and
 
 Python 2.7 + (should be installed already on a Mac)
 
-sed, rename, mv (should be installed already on a Mac)
-
 Homebrew: https://brew.sh/
 - we recommend installing this package manager for macOS, since it makes installing YouTube-dl and Aeneas easier.
 - paste the following code into a mac Terminal and press Return
@@ -14,6 +12,12 @@ Homebrew: https://brew.sh/
 
 youtube-dl: https://rg3.github.io/youtube-dl/
 `brew install youtube-dl`
+
+rename
+`brew install rename`
+
+sed
+`brew install gnu-sed --with-default-names`
 
 Aeneas: https://github.com/readbeyond/aeneas
 - To install Aeneas and all its dependencies on macOS X 10.7 and up, we recommend the aeneas-installer method provided by Daniel Bair (https://github.com/danielbair/aeneas-installer_)

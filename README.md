@@ -28,13 +28,15 @@ pcregrep
 
 `chmod +x path/to/punctuate.sh` etc.
 
-5) Enter path to playlist.sh script and add the URL to the YouTube video/playlist.
+5) Enter path to playlist.sh script; then add the URL to the YouTube video or playlist.
 
 `path/to/playlist.sh YouTube_URL`
 
-6) You will receive a transcript(s) of the YouTube video(s) in a "Completed" folder.
+6) You will receive a transcript(s) of the YouTube video(s) in a "Completed" folder along with a log file that reports the following info: 1) Edited CCs downloaded 2) Auto CCs downloade and 3) Videos that had no CC track.
 
 ## Notes
 
+- Scripts can be used on a single YouTube video or a playlist.
+- Remove `--skip download` from `playlist.sh` if you wish to download the YouTube video along with the CCs 
 - These scripts have been designed for use on a Mac. For scripts that will work on a PC, see this repo: https://github.com/polizoto/auto_captions_dl_pc
 - For more information, please contact jpolizzotto@htctu.net

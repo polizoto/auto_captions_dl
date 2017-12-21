@@ -6,13 +6,13 @@ Download the auto captions file from a YouTube video, convert to plain text, and
 youtube-dl:
 `brew install youtube-dl`
 
-rename
+rename:
 `brew install rename`
 
-sed
+sed:
 `brew install gnu-sed --with-default-names`
 
-pcregrep
+pcregrep:
 `brew install pcre`
 
 ## Usage
@@ -22,7 +22,7 @@ pcregrep
 
 3) CD to directory with scripts.
 
-4) Type `playlist.sh`; then add the URL to the YouTube video/ playlist.
+4) Type `playlist.sh`; then add the URL to the YouTube video/ playlist:
 
 `playlist.sh YouTube_video/playlist_URL`
 

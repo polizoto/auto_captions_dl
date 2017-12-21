@@ -22,11 +22,18 @@ pcregrep:
 
 3) CD to directory with scripts.
 
-4) Type `./playlist.sh`; then add the URL to the YouTube video/ playlist:
+4) Make scripts executable (one-time step_
+
+`chmod +x playlist.sh`
+`chmod +x punctuate.sh`
+`chmod +x punctuate_playlist.sh`
+`chmod +x punctuate_2.sh`
+
+5) Type `./playlist.sh`; then add the URL to the YouTube video/ playlist:
 
 `./playlist.sh YouTube_video/playlist_URL`
 
-5) You will receive a transcript(s) of the YouTube video(s) in a "Completed" folder along with a log file that reports the following info: 1) Edited CCs downloaded 2) Auto CCs downloade and 3) Videos that had no CC track.
+6) You will receive a transcript(s) of the YouTube video(s) in a "Completed" folder along with a log file that reports the following info: 1) Edited CCs downloaded 2) Auto CCs downloade and 3) Videos that had no CC track.
 
 ## Notes
 

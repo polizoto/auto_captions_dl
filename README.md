@@ -22,7 +22,7 @@ pcregrep:
 
 3) CD to directory with scripts.
 
-4) Make scripts executable (one-time step_
+4) Make scripts executable (one-time step)
 
 `chmod +x playlist.sh`
 `chmod +x punctuate.sh`

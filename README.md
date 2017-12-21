@@ -28,7 +28,7 @@ pcregrep
 
 `chmod +x path/to/punctuate.sh` etc.
 
-5) Enter path to playlist.sh script and add the URL to the YouTube video.
+5) Enter path to playlist.sh script and add the URL to the YouTube video/playlist.
 
 `path/to/playlist.sh YouTube_URL`
 

@@ -1,8 +1,5 @@
 #!/bin/bash
 # Joseph Polizzotto
-# Script used in captioning workflow (playlists)
-# This script has been tested to work on MacOS; please contact me for any questions about use on other platforms
-# This script should be run after each sentence has been placed on its own line (use sentenceboundary.pl script)
 # 408-996-6044
 
 # check dependencies 

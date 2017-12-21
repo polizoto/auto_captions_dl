@@ -40,6 +40,7 @@ pcregrep:
 
 ## Notes
 
+- If you don't have Homebrew installed on your MacOS (which is recommended for installing dependencies), you can install it by pasting `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` into a terminal and pressing Enter.
 - Remove `--skip download` from `playlist.sh` if you wish to download the YouTube video along with the CCs 
 - These scripts have been designed for use on a Mac. For scripts that will work on a PC, see this repo: https://github.com/polizoto/auto_captions_dl_pc
 - For more information, please contact jpolizzotto@htctu.net

@@ -24,10 +24,13 @@ pcregrep:
 
 4) Make scripts executable (one-time step)
 
-`chmod +x playlist.sh`
-`chmod +x punctuate.sh`
-`chmod +x punctuate_playlist.sh`
-`chmod +x punctuate_2.sh`
+`chmod +x ./playlist.sh`
+
+`chmod +x ./punctuate.sh`
+
+`chmod +x ./punctuate_playlist.sh`
+
+`chmod +x ./punctuate_2.sh`
 
 5) Type `./playlist.sh`; then add the URL to the YouTube video/ playlist:
 

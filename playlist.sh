@@ -246,14 +246,14 @@ fi
 rm -r ./report2.txt
 rm -r ./log.txt
 
-echo -e "\n**Remember to remove transcripts and 'log' file from the 'Completed' folder and delete the 'Completed' folder before running the script again**\n" >> report.txt
+echo -e "\n**If CC tracks were downloaded, the transcripts have been placed into the 'Completed' folder. A log file was also created for this job.**\n" >> report.txt
 
 echo -e "\nauto_captions_log for transcripts created at "$(date +%H:%M/%m/%d/%Y) | cat - report.txt > temp && mv temp report.txt
 
 # Display Report
 cat ./report.txt
 
-sed -i "s/\*\*Remember to remove transcripts and 'log' file from the 'Completed' folder and delete the 'Completed' folder before running the script again\*\*//" report.txt
+sed -i "s/\*\*If CC tracks were downloaded, the transcripts have been placed into the 'Completed' folder. A log file was also created for this job.\*\*//" report.txt
 
 # delete empty white space at top of document
 sed -i '/./,$!d' report.txt

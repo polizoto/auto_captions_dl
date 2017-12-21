@@ -3,7 +3,7 @@ Download the auto captions file from a YouTube video, convert to plain text, and
 
 ## Dependencies
 
-youtube-dl: https://rg3.github.io/youtube-dl/
+youtube-dl:
 `brew install youtube-dl`
 
 rename

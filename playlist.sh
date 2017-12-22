@@ -272,6 +272,22 @@ sed -i "s/No caption tracks were missing/No caption tracks were missing\n/" repo
 
 fi
 
+# Display error message in report if it exists
+
+if grep -q "ERROR:" ./log.txt; then
+
+echo -e "\033[39m" >> report.txt
+
+echo -e "YouTube-dl Error Messages:\033[0m" >> report.txt
+
+echo -e "\033[31m" >> report.txt
+
+grep "ERROR:" ./log.txt >> report.txt
+
+sed -i "s/ERROR: /ERROR: \https:\/\/youtu.be\//" report.txt
+ 
+fi
+
 # Clean up files
 rm -r ./report2.txt
 rm -r ./log.txt

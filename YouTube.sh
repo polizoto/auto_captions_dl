@@ -25,7 +25,7 @@ filepathWithoutExtension="${f%.*}"
 echo Downloading caption tracks from YouTube...
 
 # Download playlist
-youtube-dl "$@" --yes-playlist --skip-download --write-sub --sub-lang en --write-auto-sub --output "%(title)s" >> log.txt 2>&1
+youtube-dl "$@" -i --yes-playlist --skip-download --write-sub --sub-lang en --write-auto-sub --output "%(title)s" >> log.txt 2>&1
 
 # Check if caption tracks were downloaded
 

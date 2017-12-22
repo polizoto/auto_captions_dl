@@ -8,7 +8,7 @@ do
 
 sed -ri "s@CONTENTS@$(cat "$d"*.txt)@g" "$d"punctuate.sh
 
-echo punctuating transcript for "$d"...
+echo punctuating "$d"...
 
 "$d"punctuate.sh
 

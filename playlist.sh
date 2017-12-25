@@ -23,13 +23,14 @@ filepathWithoutExtension="${f%.*}"
 mkdir tmp
 mkdir punctuate
 
-if [ ! -d ./Completed ]; then
+# Add Transcripts directory if missing
+if [ ! -d ./Transcripts ]; then
 
-mkdir Completed
+mkdir Transcripts
 
 fi
 
-mv log.txt ./Completed
+mv log.txt ./Transcripts
 
 # Find Auto CC files and move to 'Punctuate' directory
 pcregrep -Mnol 'Language:\ en.*\n\n' ./*.vtt . | xargs -I{} mv {} ./tmp
@@ -67,7 +68,7 @@ echo "\033[0m" >> EditedCCList.txt
 
 cd ..
 
-mv ./tmp/EditedCCList.txt ./Completed
+mv ./tmp/EditedCCList.txt ./Transcripts
 
 echo -e "Converting Edited CCs to plain TXT..."
 
@@ -92,7 +93,7 @@ find ./tmp -type f -exec sed -i ':a;N;$!ba;s/\n/ /g' {} \;
 echo -e "Done"
 
 # Move files back to current working directory
-mv ./tmp/*.txt ./Completed
+mv ./tmp/*.txt ./Transcripts
 
 rm -r ./tmp 
 
@@ -127,7 +128,7 @@ echo '\033[33m' | cat - PunctuatedCCList.txt > temp && mv temp PunctuatedCCList.
 
 cd ..
 
-mv ./punctuate/PunctuatedCCList.txt ./Completed
+mv ./punctuate/PunctuatedCCList.txt ./Transcripts
 
 # Print Message
 echo -e "Converting Auto CCs to plain TXT..."
@@ -172,7 +173,10 @@ cd ./punctuate && ./punctuate_2.sh
 # Go back to Home working directory
 cd ..
 
-mv ./Punctuated/*.txt ./Completed/
+# add punctation to end of document
+find ./Punctuated -type f -exec sed -i 's/\([a-zA-Z]\)$/\1./g' {} \;
+
+mv ./Punctuated/*.txt ./Transcripts/
 
 rm -r ./punctuate
 rm -r ./Punctuated
@@ -184,7 +188,7 @@ fi
 
 # Move to Completed directory and run reports
 
-cd ./Completed
+cd ./Transcripts
 
 touch report2.txt
 
@@ -316,6 +320,14 @@ sed -i '1N;N;/^\n\n$/d;P;D' report.txt
 mv ./report.txt ../
 
 cd ..
+
+# Move mp4 to Transcripts folder
+if [ "$(ls -A ./*.mp4)" ]; then
+
+mv ./*.mp4 ./Transcripts
+
+fi
+
 
 mv ./report.txt log_$(date +%H%M:%m:%d:%Y).txt
 

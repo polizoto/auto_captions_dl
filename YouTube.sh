@@ -25,8 +25,8 @@ filepathWithoutExtension="${f%.*}"
 echo Downloading caption tracks from YouTube...
 
 # Download playlist
-# youtube-dl "$@" -i --yes-playlist --skip-download 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --write-sub --sub-lang en --write-auto-sub --output "%(title)s" >> log.txt 2>&1
-youtube-dl "$@" -i --yes-playlist -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
+
+youtube-dl "$@" -i --yes-playlist --skip-download -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
 
 
 # Find videos and move them

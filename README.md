@@ -38,7 +38,7 @@ pcregrep:
 
 `./YouTube.sh YouTube_video/playlist_URL`
 
-6) You will receive a transcript(s) of the YouTube video(s) in a "Completed" folder along with a log file that reports the following info: 1) Edited CCs downloaded 2) Videos that had no CC track and 3) Auto CCs downloaded.
+6) You will receive a transcript(s) of the YouTube video(s) in a "Transcripts" folder. A log file will report the following info: 1) Edited CCs downloaded 2) Videos that had no CC track and 3) Auto CCs downloaded.
 
 ## Notes
 

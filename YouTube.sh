@@ -25,8 +25,8 @@ filepathWithoutExtension="${f%.*}"
 echo Downloading caption tracks from YouTube...
 
 # Download playlist
-
-youtube-dl "$@" -i --yes-playlist --skip-download -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
+# youtube-dl "$@" -i --yes-playlist --skip-download -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
+youtube-dl "$@" -i --yes-playlist -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
 
 
 # Find videos and move them
@@ -34,9 +34,11 @@ count=`ls -1 *.mp4 2>/dev/null | wc -l`
 	
 if [ $count != 0 ] ; then
 
-echo -e "These video files were downloaded:"
+echo -e "These video files were downloaded:\n"
 
 ls ./*.mp4
+
+echo -e ""
 
 else
 

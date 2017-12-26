@@ -321,13 +321,6 @@ mv ./report.txt ../
 
 cd ..
 
-# Move mp4 to Transcripts folder
-if [ "$(ls -A ./*.mp4)" ]; then
-
-mv ./*.mp4 ./Transcripts
-
-fi
-
 if [ ! -d ./Logs ]; then
 
 mkdir Logs

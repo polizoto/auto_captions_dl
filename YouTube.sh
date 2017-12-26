@@ -28,13 +28,18 @@ echo Downloading caption tracks from YouTube...
 # youtube-dl "$@" -i --yes-playlist --skip-download -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
 youtube-dl "$@" -i --yes-playlist -f 22 --write-sub --sub-lang en --write-auto-sub --output "%(title)s.%(ext)s" >> log.txt 2>&1
 
+if [ ! -d ./Logs ]; then
+
+mkdir Logs
+
+fi
 
 # Find videos and move them
 count=`ls -1 *.mp4 2>/dev/null | wc -l`
 	
 if [ $count != 0 ] ; then
 
-echo -e "These video files were downloaded:\n"
+echo -e "\nThese video files were downloaded:\n"
 
 ls ./*.mp4
 
@@ -58,7 +63,7 @@ else
 
 	touch log2.txt
 
-      echo -e "\nauto_captions_log for transcripts downloaded at "$(date +%H:%M/%m/%d/%Y) | cat - log2.txt > temp && mv temp log2.txt
+      echo -e "auto_captions_log for transcripts downloaded at "$(date +%H:%M/%m/%d/%Y) | cat - log2.txt > temp && mv temp log2.txt
 
    echo -e "\nThese videos did not contain any caption tracks:" >> log2.txt
     
@@ -84,7 +89,11 @@ sed -i 's/\[0m//g' log.txt
 # delete empty white space at top of document
 sed -i '/./,$!d' log.txt
 
-mv ./log.txt log_$(date +%H%M:%m:%d:%Y).txt
+mv ./log.txt ./Logs
+
+cd ./Logs
+
+mv ./log.txt ./auto_caption_log_$(date +%H%M:%m:%d:%Y).txt
     
     exit 1
     

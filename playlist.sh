@@ -328,7 +328,14 @@ mv ./*.mp4 ./Transcripts
 
 fi
 
+if [ ! -d ./Logs ]; then
 
-mv ./report.txt log_$(date +%H%M:%m:%d:%Y).txt
+mkdir Logs
+
+fi
+
+mv ./report.txt ./Logs
+
+mv ./Logs/report.txt ./Logs/auto_caption_log_$(date +%H%M:%m:%d:%Y).txt
 
 done

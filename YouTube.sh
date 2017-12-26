@@ -34,6 +34,12 @@ mkdir Logs
 
 fi
 
+if [ ! -d ./Transcripts ]; then
+
+mkdir Transcripts
+
+fi
+
 # Find videos and move them
 count=`ls -1 *.mp4 2>/dev/null | wc -l`
 	
@@ -44,6 +50,8 @@ echo -e "\nThese video files were downloaded:\n"
 ls ./*.mp4
 
 echo -e ""
+
+mv ./*.mp4 ./Transcripts
 
 else
 

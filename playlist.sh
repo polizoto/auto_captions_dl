@@ -45,6 +45,15 @@ mv *.vtt ./punctuate
 
 fi
 
+# Find videos and move them
+count=`ls -1 *.mp4 2>/dev/null | wc -l`
+	
+if [ $count != 0 ] ; then
+
+mv ./*.mp4 ./Transcripts
+
+fi
+
 if [ "$(ls -A ./tmp)" ]; then
 
 # Change the name so that there is the title only
